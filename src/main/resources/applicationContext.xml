@@ -18,20 +18,15 @@
           class="org.example.ClassicalMusic">
     </bean>
 
-    <bean id="musicList"
-        class="java.util.ArrayList">
-        <constructor-arg>
-            <list>
-                <ref bean="classicalMusicBean"/>
-                <ref bean="popMusicBean"/>
-                <ref bean="rockMusicBean"/>
-            </list>
-        </constructor-arg>
-    </bean>
-
     <bean id="musicPlayer"
           class="org.example.MusicPlayer">
-        <constructor-arg name="musicList" ref="musicList"/>
+        <property name="musicList">
+            <list>
+                <ref bean="rockMusicBean"/>
+                <ref bean="classicalMusicBean"/>
+                <ref bean="popMusicBean"/>
+            </list>
+        </property>
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
     </bean>
