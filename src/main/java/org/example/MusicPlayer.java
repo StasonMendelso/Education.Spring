@@ -6,27 +6,26 @@ import java.util.List;
  * @author Stanislav Hlova
  */
 public class MusicPlayer {
-    private List<Music> musicList;
+    private Music music;
     private String name;
     private int volume;
 
     // IoC
 
-    public MusicPlayer(List<Music> musicList) {
-        this.musicList = musicList;
+
+    public MusicPlayer(Music music) {
+        this.music = music;
     }
 
     public MusicPlayer() {
     }
 
     public void playMusic() {
-        for(Music music : musicList) {
-            System.out.printf("Playing: %s\n", music.getSong());
-        }
+        System.out.printf("Playing: %s\n", music.getSong());
     }
 
-    public void setMusicList(List<Music> musicList) {
-        this.musicList = musicList;
+    public void setMusic(Music music) {
+        this.music = music;
     }
 
     public String getName() {
