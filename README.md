@@ -17,10 +17,11 @@ In addition to, it is the first project, where I use the MarkDown language and m
 description to the project. So, the skill in using MarkDown language is being acquired too.
 
 
-[//]: # (## Getting Started)
+## Getting Started
 
-[//]: # ()
-[//]: # (These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.)
+As there isn't a real or PET project, for viewing the all notes, which were made 
+during my study, you can switch between branches and see my notes, some examples
+of code for each lesson.
 
 [//]: # ()
 [//]: # (### Prerequisites)
