@@ -9,16 +9,17 @@ import org.springframework.stereotype.Component;
  */
 @Component("myMusicPlayer")
 public class MusicPlayer {
-    private Music music;
+    private ClassicalMusic classicalMusic;
+    private PopMusic popMusic;
+
     @Autowired
-    public MusicPlayer(Music music) {
-        this.music = music;
-    }
-    public void setMusic(Music music) {
-        this.music = music;
+    public MusicPlayer(ClassicalMusic classicalMusic, PopMusic popMusic) {
+        this.classicalMusic = classicalMusic;
+        this.popMusic = popMusic;
     }
 
     public void playMusic() {
-        System.out.printf("Playing: %s", music.getSong());
+        System.out.printf("Playing: %s\n", classicalMusic.getSong());
+        System.out.printf("Playing: %s\n", popMusic.getSong());
     }
 }
