@@ -1,6 +1,5 @@
 package org.example;
 
-import java.util.List;
 
 /**
  * @author Stanislav Hlova
@@ -31,7 +30,6 @@ public class MusicPlayer {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
