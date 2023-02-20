@@ -21,7 +21,7 @@ public class SpringConfig {
     }
     @Bean("myMusicPlayer")
     public MusicPlayer musicPlayer(){
-        return new MusicPlayer(classicalMusic(),rockMusic());
+        return new MusicPlayer(classicalMusic());
     }
     @Bean()
     public Computer computer(){
