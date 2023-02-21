@@ -1,5 +1,6 @@
 package org.example.controllers;
 
+import org.example.calculator.CalculatorAction;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,5 +28,29 @@ public class FirstController {
     @GetMapping("/goodbye")
     public String goodbyePage() {
         return "first/goodbye";
+    }
+
+    @GetMapping("/calculator")
+    public String calculate(@RequestParam("a") int a,
+                            @RequestParam("b") int b,
+                            @RequestParam("action") String action,
+                            Model model) {
+
+        double result = 0;
+        CalculatorAction calculatorAction = CalculatorAction.getInstance(action);
+        if (calculatorAction == null) {
+            model.addAttribute("result", result);
+            return "first/calculator";
+        }
+        result = switch (calculatorAction) {
+            case MULTIPLICATION -> a * b;
+            case DIVISION -> a / (double) b;
+            case ADDITION -> a + b;
+            case SUBTRACTION -> a - b;
+        };
+
+        model.addAttribute("result", result);
+
+        return "first/calculator";
     }
 }
