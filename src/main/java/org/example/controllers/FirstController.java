@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @author Stanislav Hlova
  */
@@ -11,7 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/first")
 public class FirstController {
     @GetMapping("/hello")
-    public String helloPage(){
+    public String helloPage(HttpServletRequest request){
+        String name = request.getParameter("name");
+        String surname = request.getParameter("surname");
+
+        System.out.println(name + " " + surname);
+
         return "first/hello";
     }
     @GetMapping("/goodbye")
