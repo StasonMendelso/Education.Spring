@@ -30,6 +30,8 @@ For running some branches of the projects you need the next:
 * [Tomcat 9.0.60](https://tomcat.apache.org/) - for running the Spring MVC application part.
 * [Xmind](https://xmind.app/) - if you need to edit some my notes and then save it. Otherwise, you can see
   my notes in .png extension without any downloading additional program.
+* [PostgreSQL 15](https://www.postgresql.org/) - for running the app with database. Also you can use another database. 
+  You can find the [script](database/dump.sql) of creating database in directory with name "*[database](database)*".
 
 #### What things you need to install the software and how to install them
 
@@ -39,6 +41,11 @@ then add configuration for Tomcat server. Almost all configuration of app must b
 automatically, but check it before running. You can see
 official [guide](https://www.youtube.com/watch?v=ThBw3WBTw9Q&ab_channel=IntelliJIDEAbyJetBrains).
 After configuration, you can press run button of the server and go to browser to check the application work.
+
+For running the database you can use as me PostgreSQL or create your own database on another SQL server
+using the script file of creating the database. **Note**: if you use another server not such PostgreSQL 
+you should change JDBC driver for working with it and configurate the connection to your server in 
+properly Java classes by changing configuration of connecting. 
 
 [//]: # ()
 
