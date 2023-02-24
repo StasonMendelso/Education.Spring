@@ -43,9 +43,14 @@ official [guide](https://www.youtube.com/watch?v=ThBw3WBTw9Q&ab_channel=IntelliJ
 After configuration, you can press run button of the server and go to browser to check the application work.
 
 For running the database you can use as me PostgreSQL or create your own database on another SQL server
-using the script file of creating the database. **Note**: if you use another server not such PostgreSQL 
+using the [script](database/dump.sql) file of creating the database. **Note**: if you use another server not such PostgreSQL 
 you should change JDBC driver for working with it and configurate the connection to your server in 
-properly Java classes by changing configuration of connecting. 
+properly Java classes by changing configuration of connection.
+<br>
+You can find an empty [database configuration file](src/main/resources/database.properties.origin),
+which must be renamed to "*database.properties*" instead of "*database.properties.origin*". This file 
+contains only keys for configuration the database, so you can put your values to the file and run 
+application with this database configuration.
 
 [//]: # ()
 
