@@ -9,11 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
  */
 @Controller
 public class HelloController {
-        @Value("${hello}")
-        private String hello;
         @GetMapping("/hello")
         public String hello(){
-            System.out.println(this.hello);
             return "hello";
         }
 }
