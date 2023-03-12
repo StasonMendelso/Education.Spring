@@ -152,8 +152,8 @@ application with this database configuration.
 
 * **Stanislav Hlova** - *All work* - [StasonMendelso](https://github.com/StasonMendelso)
 
-[1]:(https://www.udemy.com/course/spring-alishev/)
+[1]:https://www.udemy.com/course/spring-alishev/
 
-[2]:(https://spring.io/)
+[2]:https://spring.io/
 
-[3]:(https://tomcat.apache.org/tomcat-5.5-doc/servletapi/index.html)
+[3]:https://metanit.com/java/javaee/4.1.php
