@@ -40,6 +40,11 @@ public class SecurityConfig {
                         .loginProcessingUrl("/process_login")
                         .failureUrl("/auth/login?error")
                         .defaultSuccessUrl("/hello")
+                )
+                .logout(logout -> logout
+                        .logoutUrl("/logout")
+                        .logoutSuccessUrl("/auth/login")
+                        .deleteCookies("JSESSIONID")
                 );
 
         return httpSecurity.build();
