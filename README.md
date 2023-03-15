@@ -35,22 +35,32 @@ For running some branches of the projects you need the next:
 
 #### What things you need to install the software and how to install them
 
-For running the code branches with Spring MVC you need install the Tomcat and configure it
-in your idea. If you use the Intellij IDEA you can click on **Run** button and choose **Edit configuration**,
-then add configuration for Tomcat server. Almost all configuration of app must be added
-automatically, but check it before running. You can see
-official [guide](https://www.youtube.com/watch?v=ThBw3WBTw9Q&ab_channel=IntelliJIDEAbyJetBrains).
-After configuration, you can press run button of the server and go to browser to check the application work.
+
+##### Database configuration
 
 For running the database you can use as me PostgreSQL or create your own database on another SQL server
-using the [script](database/dump.sql) file of creating the database. **Note**: if you use another server not such PostgreSQL 
-you should change JDBC driver for working with it and configurate the connection to your server in 
-properly Java classes by changing configuration of connection.
+using the [script](database/dump.sql) file of creating the database.
 <br>
-You can find an empty [database configuration file](src/main/resources/database.properties.origin),
-which must be renamed to "*database.properties*" instead of "*database.properties.origin*". This file 
-contains only keys for configuration the database, so you can put your values to the file and run 
-application with this database configuration.
+**Note**: if you use another server not such
+PostgreSQL you should change JDBC driver for working with it and configurate the connection to your
+server in appropriate property file, which you must create manually. If you change driver, you should
+make some changes in [pom.xml file](pom.xml)
+<br>
+
+##### Server configuration
+
+For running the code you needn't install server and configure it, because the Spring Boot starter
+makes it instead of you using the pom.xml.
+
+### Running the web-app
+You can find an empty [application configuration file](src/main/resources/application.properties.origin),
+which must be renamed to "*application.properties*" instead of "*application.properties.origin*". This file
+contains only keys for configuration the application using the Spring Boot, so you can put your values to the file and run
+application with this application configuration. You can find more about configuration of Spring Boot application on
+the Internet.
+<br>
+For running the app on the server you need only run the main method in Java class. Also, you can
+package app to the jar file and deploy the file on the server manually.
 
 [//]: # ()
 
