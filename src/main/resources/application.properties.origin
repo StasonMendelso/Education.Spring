@@ -9,4 +9,5 @@ spring.jpa.properties.hibernate.show_sql=
 spring.mvc.hiddenmethod.filter.enabled=
 
 server.servlet.context-path=
-jwt.secret
+jwt.secret =
+

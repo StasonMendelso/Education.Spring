@@ -1,5 +1,7 @@
 # Education.Spring
 
+[![wakatime](https://wakatime.com/badge/github/StasonMendelso/Education.Spring.svg)](https://wakatime.com/badge/github/StasonMendelso/Education.Spring)
+
 ## What is the project about?
 
 Repository is for educational purpose - learning a Spring framework.
